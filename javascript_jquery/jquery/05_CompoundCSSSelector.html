@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Concepts</title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="customScripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p.mark").css("background", "yellow");
+            $("#mark span").css("background", "yellow");
+            $("ul#mark > span").css("background", "yellow");
+            $("a[target='_blank']").css("background", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <!-- selecting elements by Compound CSS Selector -->
+    <p>this is paragraph</p>
+    <p class="mark">this is another paragraph</p>
+    <p>this is one more paragraph</p>
+
+    <ul>
+        <li>list item one</li>
+        <li>list item two</li>
+        <li>list item three</li>
+    </ul>
+
+    <ul id="mark">
+        <li>list item one</li>
+        <li>list <span>item two</span></li>
+        <li>list item three</li>
+    </ul>
+
+    <ul id="mark">
+        <li>list item one</li>
+        <li>list item two</li>
+        <li>list item three</li>
+    </ul>
+
+    <p>Go to <a href="http://www.google.com" target="_blank">Google Page</a></p>
+</body>
+</html>

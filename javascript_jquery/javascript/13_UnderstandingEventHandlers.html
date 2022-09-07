@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function sayHello() {
+            alert('say Hello!');
+        }
+
+        function highLightInput(elem) {
+            elem.style.background = "yellow";
+        }
+
+        function winResize() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+
+            var txt = `window Width: ${w}, and Height: ${h}`;
+            document.getElementById('resizeResult').innerHTML = txt;
+        }
+    </script>
+</head>
+<body onload="window.alert('page loaded!')">
+    <div class="wrapper">
+        <!-- mouse events -->
+        <button type="button" class="btn" onclick="alert('hello user')"> btn1 </button>
+
+        <button type="button" class="btn" id="myBtn"> btn2 </button>
+
+        <!-- contextmenu -->
+        <a href="#" class="btn" oncontextmenu="alert('you\'ve right clicked')"> context </a>
+
+        <!-- mouse over/out -->
+        <button type="button" class="btn" onmouseover="alert('you\'ve place a mouse on me')"> mouse over </button>
+
+        <!-- keyboard events -->
+        <input type="text" onkeydown="alert('you\ve done a keydown')" />
+
+        <!-- form events -->
+        <form>
+            <input type="text" onfocus="highLightInput(this)" />
+        </form>
+
+        <form>
+            <select onchange="alert('you\'ve changed the option')">
+                <option> php </option>
+                <option> java </option>
+                <option> aws </option>
+                <option> reactjs </option>
+            </select>
+        </form>
+
+        <button type="button" class="btn" id="reSize"> resize </button>
+
+        <p id="resizeResult"></p>
+
+        <script>
+            document.getElementById("myBtn").onclick = sayHello;
+
+            document.getElementById("reSize").onclick = winResize;
+        </script>
+    </div>
+</body>
+</html>

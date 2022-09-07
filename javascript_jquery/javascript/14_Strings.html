@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var str1 = "It's Okay!";
+            var str2 = 'He said to us "GoodBye!"';
+            var str3 = 'She replied \'Calm down, Please!\'';
+            var str4 = "Hi \"John\", there";
+
+            // escape sequences: \n, \t, \r, \b, \\, \'
+            // operations on strings
+            var str1 = "this is a paragraph of text";
+            document.write(`the length of the string: ${str1.length} <br />`);
+
+            // finding a string inside another string
+            var str = "If the facts don't fit the theory, change the facts.";
+            var findPos = str.indexOf("facts");
+            document.write(`the pos of a given string: ${findPos} <br />`);
+
+            var findPos = str.lastIndexOf("facts");
+            document.write(`the pos of a given string - lastIndexOf: ${findPos} <br />`);
+
+            // searching for a pattern inside a string
+            var str = "Color red looks brighter than color blue";
+            
+            // case sensitive search
+            var pos1 = str.search("color");
+            document.write(`the pos1 of a given string - search: ${pos1} <br />`);
+
+            // case insensitive search
+            var pos1 = str.search(/color/i);
+            document.write(`the pos1 of a given string - search: ${pos1} <br />`);
+
+            // extracting a substring from a string
+            var str = "The quick brown fox jumps over the lazy dog.";
+            var extractStr = str.slice(4, 15);
+            document.write(`the extractStr - splice: ${extractStr} <br />`);
+
+            var extractStr = str.slice(-12, -7);
+            document.write(`the extractStr - splice: ${extractStr} <br />`);
+
+            var extractStr = str.substring(4, 15);
+            document.write(`the extractStr - substring: ${extractStr} <br />`);
+
+            // var extractStr = str.substring(-12, -7);
+            // document.write(`the extractStr - substring: ${extractStr} <br />`);
+
+            // extracting a fixed number of characters from a string
+            var extractStr = str.substr(4, 15);
+            document.write(`the extractStr - substr: ${extractStr} <br />`);
+
+            // replacing the contents of a string
+            var str = "Color red looks brighter than color blue";
+            var replacedStr = str.replace("color", "paint");
+            document.write(`replacedStr - replace: ${replacedStr} <br />`);
+
+            var replacedStr = str.replace(/color/gi, "paint");
+            document.write(`replacedStr - replace: ${replacedStr} <br />`);
+
+            // converting a string to uppercase and lowercase
+            var str = "Hello John! How are You?";
+            var convertStr = str.toUpperCase();
+            document.write(`convertStr - toUpperCase - ${convertStr} <br />`);
+
+            var convertStr = str.toLowerCase();
+            document.write(`convertStr - toLowerCase - ${convertStr} <br />`);
+
+            // concatenating of two strings
+            var hello = "Hello";
+            var world = "World";
+
+            var greet = hello + " " + world;
+            document.write(`greet: ${greet} <br />`);
+
+            // accessing individual characters from a string
+            var str = "Hello World!";
+            document.write(`charAt - ${str.charAt(3)} <br />`);
+            document.write(`[] - ${str[7]} <br />`);
+
+            // splitting a string into an array
+            var str = "Color red looks brighter, than color blue";
+            var splitStr = str.split(", ");
+            document.write(`splitStr[]: ${splitStr[0]} <br />`);
+            document.write(`splitStr[]: ${splitStr[1]} <br />`);
+
+            for(let item in splitStr) {
+                document.write(`splitStr: ${splitStr[item]} <br />`);
+            }
+        </script>
+    </div>
+</body>
+</html>

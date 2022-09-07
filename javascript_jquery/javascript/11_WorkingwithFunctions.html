@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // working with functions
+            // giving a call to function
+            myFunc();
+            document.write(`-----------------------------------<br />`);
+
+            // global variables
+            let num1 = 6;
+            let num2 = 8;
+
+            // function call with parameters
+            passParams(num1, num2);
+            document.write(`-----------------------------------<br />`);
+
+            num1 = 2.7;
+            num2 = 8.3;
+
+            // function call with parameters
+            passParams(num1, num2);
+            document.write(`-----------------------------------<br />`);
+
+            // function with return statement
+            let res = 0;
+
+            res = returnFunction(num1, num2);
+            document.write(`the value of res from return statement: ${res} <br />`);
+            document.write(`-----------------------------------<br />`);
+
+            // anonymous function
+            res = anonymousFunction(num1, num2);
+            document.write(`the value of res from anonymous function return statement: ${res} <br />`);
+            document.write(`-----------------------------------<br />`);
+
+            let firstName = "john";
+            let lastName = "paul";
+
+            res = arrowFunction(firstName, lastName);
+            document.write(`the value of res from arrow function return statement: ${res} <br />`);
+            document.write(`-----------------------------------<br />`);
+
+            res = arrowFunction(firstName);
+            document.write(`the value of res from arrow function return statement: ${res} <br />`);
+            document.write(`-----------------------------------<br />`);
+
+        </script>
+    </div>
+</body>
+</html>

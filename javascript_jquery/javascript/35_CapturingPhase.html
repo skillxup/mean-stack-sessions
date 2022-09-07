@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+        div, p, a {
+            padding: 5px 10px;
+            display: block;
+            border: 2px solid #000;
+            background: #fff;
+        }
+    </style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function showTagName() {
+            document.getElementById("getRes").innerHTML = `capturing the tagName: ${this.tagName}`;
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">DIV
+        <p class="hint">P
+            <a href="#">A</a>
+        </p>
+    </div>
+
+    <div id="getRes"></div>
+
+    <script>
+        var elems = document.querySelectorAll("div, p, a");
+        for(let elem of elems) {
+            elem.addEventListener("click", showTagName, true);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+
+        #myRes, #myRes2, #myRes3 {
+            border: 1px solid #000;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin: 3px;
+            background-color: #f2f2f2;
+            width: 110px;
+            height: auto;
+            float: left;
+        }
+    </style>
+
+    <script src="customScripts.js"></script>
+    <script>
+
+        function firstFunction() {
+            var str = 'this is firstFunction executed';
+            document.getElementById("myRes").innerHTML = str;
+        }
+
+        function secondFunction() {
+            var str = 'this is secondFunction executed';
+            document.getElementById("myRes").innerHTML = str;
+        }
+
+        function sayHello() {
+            var str = 'hey, how are you doing?';
+            document.getElementById("myRes2").innerHTML = str;
+        }
+
+        function setHoverColor() {
+            btn2.style.backgroundColor = "yellowgreen";
+        }
+
+        function setNormalColor() {
+            btn2.style.backgroundColor = "black";
+            btn2.style.color = "white";
+        }
+
+        function getWindowDetails() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var size = `width: ${w}, and height: ${h}`;
+            document.getElementById("myRes3").innerHTML = size
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button" id="myBtn"> click me </button>
+        <button type="button" id="myBtn2"> do something </button>
+        <button type="button" id="myBtn3"> window object </button>
+
+        <div style="clear: both;"></div>
+
+        <div id="myRes"></div>
+        <div id="myRes2"></div>
+        <div id="myRes3"></div>
+        
+        <div style="clear: both;"></div>
+
+        <script>
+            var btn = document.getElementById("myBtn");
+            // btn.onclick = firstFunction;
+            // btn.onclick = secondFunction;
+
+            btn.addEventListener("click", firstFunction);
+            btn.addEventListener("click", secondFunction);
+
+            // adding Event Listeners for different Event Types
+            var btn2 = document.getElementById("myBtn2");
+            btn2.addEventListener("click", sayHello);
+            btn2.addEventListener("mouseover", setHoverColor);
+            btn2.addEventListener("mouseout", setNormalColor);
+
+            // adding Event Listeners to Window Object
+            var btn3 = document.getElementById("myBtn3");
+            btn3.addEventListener("click", getWindowDetails);
+
+            // removing Event Listeners
+            btn.removeEventListener("click", secondFunction);
+        </script>
+    </div>
+</body>
+</html>

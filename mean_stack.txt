@@ -1,0 +1,10 @@
+-> What is MEAN Stack?
+	- MEAN stands for MongoDb, ExpressJs, Angular, NodeJs
+	- Angular - Client
+	- NodeJs & ExpressJs - Server
+	- MongoDb - Database
+
+-> Angular: is a JS Framework which is used to build SPA
+-> NodeJs: JS RuntIme Env., 
+-> ExpressJS: Returns the Response through URL - fetching the Data from Database
+-> MongoDB: NoSql Database

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var message = "Hello World!";
+            var greet = message;
+            greet = "Hi, there!";
+
+            document.write(`message: ${message} <br />`);
+            document.write(`greet: ${greet} <br />`);
+            document.write("------------------------------------<br />");
+
+            var person = {
+                name: "peter", 
+                age: 28, 
+                gender: "male"
+            };
+
+            var user = person;
+            document.write(`user.name: ${user.name} <br />`);
+            document.write("------------------------------------<br />");
+        </script>
+    </div>
+</body>
+</html>

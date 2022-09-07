@@ -1,0 +1,15 @@
+{
+    "book": {
+        "name": "Harry Potter", 
+        "author": "", 
+        "year": 1245, 
+        "genre": "Fantasy"
+    }, 
+
+    "fruits": [
+        "apple", 
+        "banana", 
+        "strawberry", 
+        "mango"
+    ]
+}

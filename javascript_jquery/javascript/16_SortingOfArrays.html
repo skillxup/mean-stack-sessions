@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var fruits = ["banana", "orange", "apple", "papaya", "mango"];
+            document.write(`fruits: ${fruits} <br />`);
+            document.write('----------------------------------<br />');
+
+            // sorting of an array
+            var sortedFruits = fruits.sort();
+            document.write(`sorted fruits: ${sortedFruits} <br />`);
+            document.write('----------------------------------<br />');
+
+            // reverse of an array
+            var counts = ["one", "two", "three", "four", "five"];
+            document.write(`counts: ${counts} <br />`);
+            document.write('----------------------------------<br />');
+
+            var reversed = counts.reverse();
+            document.write(`reverse counts: ${reversed} <br />`);
+            document.write('----------------------------------<br />');
+
+            // sorting numeric arrays
+            var numbers = [3, 10, 6, 20, 5, 7, 15];
+            document.write(`numbers: ${numbers} <br />`);
+            document.write('----------------------------------<br />');
+
+            var sortedNumbers = numbers.sort();
+            document.write(`numbers sorting: ${sortedNumbers} <br />`);
+            document.write('----------------------------------<br />');
+
+            var sortedNumbers = numbers.sort(function(a, b) {
+                return a - b
+            });
+            document.write(`numbers sorting: ${sortedNumbers} <br />`);
+            document.write('----------------------------------<br />');
+
+            // finding the max and min in an array - apply()
+            var numbers = [3, -7, 10, 8, 15, 2];
+            document.write(`numbers: ${numbers} <br />`);
+            document.write('----------------------------------<br />');
+
+            function findMax(array) {
+                return Math.max.apply(null, array);
+            }
+            var findMax = findMax(numbers);
+            document.write(`finding max: ${findMax} <br />`);
+            document.write('----------------------------------<br />');
+
+            function findMin(array) {
+                return Math.min.apply(null, array);
+            }
+            var findMin = findMin(numbers);
+            document.write(`finding min: ${findMin} <br />`);
+            document.write('----------------------------------<br />');
+
+            // sorting an array of objects
+            // an object is collection of properties and methods
+            // declaring an object
+            var persons = [
+                { name: 'harry', age: 14 }, 
+                { name: 'ethan', age: 30 }, 
+                { name: 'peter', age: 21 }, 
+                { name: 'clark', age: 42 }, 
+                { name: 'alice', age: 16 } 
+            ];
+            // accessing the object
+            // document.write(`accessing object - persons: ${persons}`);
+            // accessing record / item
+            document.write(`
+                person name: ${persons[0].name}, 
+                and age: ${persons[0].age}<br />`);
+            document.write('----------------------------------<br />');
+
+            var result = persons.map((person, index) => {
+                return `person name: ${person.name}, 
+                and age: ${person.age}<br />`;
+            });
+            document.write(result);
+            document.write('----------------------------------<br />');
+
+            // sort by age
+            var sortAge = persons.sort(function(a, b) {
+                return a.age - b.age;
+            });
+            var result = sortAge.map((byAge, index) => {
+                return `person name: ${byAge.name}, 
+                and age: ${byAge.age}<br />`;
+            });
+            document.write(result);
+            document.write('----------------------------------<br />');
+
+            // sort by name
+            var sortName = persons.sort(function(a, b) {
+                var x = a.name.toLowerCase();
+                var y = b.name.toLowerCase();
+                // x = abe
+                // y = baa
+                if(x < y) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+                return 0;
+            });
+            var result = sortName.map((byName, index) => {
+                return `person name: ${byName.name}, 
+                and age: ${byName.age}<br />`;
+            });
+            document.write(result);
+            document.write('----------------------------------<br />');
+
+        </script>
+    </div>
+</body>
+</html>

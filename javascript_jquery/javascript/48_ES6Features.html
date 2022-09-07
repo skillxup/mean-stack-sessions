@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function Person(name, loc) {
+            this.name = name;
+            this.loc = loc;
+
+            this.getInfo = function() {
+                return () => {
+                    alert(this.constructor.name);
+                    alert("hi, i am " + this.name + ", from " + this.loc);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // let 
+            for(let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+
+            // const 
+            const PI = 3.14;
+            console.log(PI);
+
+            const PERSON = {name: "Peter", age: 23};
+            console.log(PERSON);
+
+            // PI = 8.53;
+
+            PERSON.age = 65;
+            console.log(PERSON);
+
+            // for loop
+            let letters = ["a", "b", "c", "d", "e"];
+            for(let letter of letters) {
+                console.log(letter);
+            }
+
+            let greet = "hello world";
+            for(let character of greet) {
+                console.log(character);
+            }
+
+            // template literals
+            let str = `
+                the quick brown fox  
+                    jumps over the lazy dog
+            `;
+
+            let a = 10;
+            let b = 20;
+
+            let result = `the sum of a: ${a} and b: ${b} is ${(a + b)}`;
+            console.log(result);
+
+            // default values for function parameters
+            function sayHello(name = 'peter') {
+                console.log(`name: ${name}`);
+            }
+
+            console.log(sayHello('john'));
+            console.log(sayHello());
+
+            // arrow functions
+            let sum = (a, b) => {
+                return (a + b);
+            }
+            console.log(sum(2, 6));
+
+            // object declaration
+            var p1 = new Person("John", "Argentina");
+            var printInfo = p1.getInfo();
+            printInfo();
+        </script>
+    </div>
+</body>
+</html>

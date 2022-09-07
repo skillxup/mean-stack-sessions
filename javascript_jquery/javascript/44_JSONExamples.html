@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        // define recursive function
+        function printValues(obj) {
+            for(var k in obj) {
+                if(obj[k] instanceof Object) {
+                    printValues(obj[k]);
+                } else {
+                    document.write(`key: ${k} => ${obj[k]} <br />`);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // parsing JSON data
+            
+            // store JSON data in a JS variable
+            var json = '{"name": "Peter", "age": 22, "country": "UAE"}';
+            
+            // converting JSON object to JS object
+            var obj = JSON.parse(json);
+
+            console.log(obj);
+            console.log(obj.name);
+
+            // parsing nested JSON data
+            var json = `{
+                "book": {
+                    "name": "Harry Potter", 
+                    "author": "James", 
+                    "year": 2000, 
+                    "characters": [
+                        "Harry", 
+                        "Granger", 
+                        "Ros"
+                    ], 
+                    "genre": "Fantasy", 
+                    "price": {
+                        "paperback": "$23.86", 
+                        "hardcover": "$76.95"
+                    }
+                }
+            }`;
+            // converting JSON object to JS object
+            var obj = JSON.parse(json);
+
+            // define recursive function to print nested values
+            printValues(obj);
+            document.write(`obj["book"]["author"]: ${obj["book"]["author"]} <br />`);
+            document.write(`obj["book"]["price"]["hardcover"]: ${obj["book"]["price"]["hardcover"]} <br />`);
+
+            // encoding data as JSON object
+            
+            // stringify a JS object
+            // sample js object
+            var obj = {"name": "Peter", "age": 22, "country": "UAE"};
+            // converting js object object to JSON object string
+            var json = JSON.stringify(obj);
+            document.write(`json: ${json} <br />`);
+
+            // stringify a js array
+            var arr = ["apple", "mango", "banana", "orange"];
+            var json = JSON.stringify(arr);
+            document.write(`json: ${json} <br />`);
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <button type="button" class="btn" onclick="checkUser(username, password)"> check user </button> -->
+
+        <button type="button" class="btn" id="doCheck"> do check </button>
+
+        <script>
+            let username = 'john';
+            let password = 'demo';
+
+            var doCheckBtn = document.getElementById("doCheck");
+            doCheckBtn.addEventListener("click", checkUser);
+        </script>
+    </div>
+</body>
+</html>

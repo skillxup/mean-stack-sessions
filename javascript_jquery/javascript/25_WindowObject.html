@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function getWindowSize() {
+            // var w = window.innerWidth;
+            // var h = window.innerHeight;
+
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            
+            var res = `the width: ${w}, and height: ${h} of the window`;
+            document.getElementById("res").innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button" onclick="getWindowSize()"> get window size </button>
+
+        <div id="res"></div>
+        <script>
+            // get size of the window
+
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Concepts</title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="customScripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".up-btn").click(function() {
+                $("p").slideUp(50);
+            });
+
+            $(".down-btn").click(function() {
+                $("p").slideDown();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button" class="up-btn"> slide up paragraph </button>
+    <button type="button" class="down-btn"> slide down paragraph </button>
+
+    <p> this is paragraph </p>
+    <p> this is another paragraph </p>
+</body>
+</html>

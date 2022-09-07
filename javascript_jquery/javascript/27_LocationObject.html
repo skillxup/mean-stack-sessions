@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function getLocation() {
+            // current Page URL
+            var cpUrl = window.location.href;
+
+            // different Part of a URL
+            // hostname, port, pathname, search etc., 
+            var hostname = window.location.hostname;
+
+            var res = `current Page URL: ${cpUrl}`;
+            document.getElementById("res").innerHTML = res;
+        }
+
+        function loadDocs() {
+            var lD = window.location.assign('http://www.facebook.com');
+            var lD = window.location.replace('http://www.facebook.com');
+            document.getElementById("res").innerHTML = lD;
+
+            // reloading the page dynamically
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button" onclick="getLocation()"> get location </button>
+
+        <button type="button" onclick="loadDocs()"> loading new documents </button>
+
+        <div id="res"></div>
+        <script>
+            // get size of the window
+
+        </script>
+    </div>
+</body>
+</html>

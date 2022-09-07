@@ -1,0 +1,338 @@
+-> Commands: 
+1. Create a New Database:
+	>>> use <datbase_name>
+
+2. Switching from one Database to another Database:
+	>>> use <datbase_name>
+
+3. Checking in which Database that you are working: 
+	>>> db
+
+4. Listing of all Databases: 
+	>>> show dbs (or) >>> show databases
+
+5. Drop the Database: 
+	>>> db.dropDatabase()
+
+
+6. Create a Collection: 
+	>>> db.createCollection('collection_name')
+    >>> db.createCollection('collection_name', {capped: true, autoIndexId: true, size: 6142800, max: 10000})
+
+7. Listing of all Collections: 
+	>>> show collections
+
+8. Drop the Collection: 
+	>>> db.<collection_name>.drop()
+
+
+9. Insert the Documents / Items: 
+	>>> db.<collection_name>.insert()
+
+example:
+db.posts.insert({
+	title: 'ReactJs Overview', 
+	description: 'Learn more about the ReactJs', 
+	by: 'Jims', 
+	url: 'https://reactjs.com', 
+	tags: [
+		'reactjs', 
+		'web development'
+	]
+});
+
+10. Inserting Single Document: 
+	>>> db.<collection_name>.insertOne();
+
+example
+db.posts.insertOne(
+	{
+		title: 'Java Overview', 
+		description: 'Learn more about the Java', 
+		by: 'Jims', 
+		url: 'https://java.com', 
+		tags: [
+			'mobile apps', 
+			'web development'
+		], 
+		likes: 124, 
+		comments: [
+			{
+				user: "johny", 
+				message: "i require to learn java", 
+				dateCreated: new Date()
+			}, 
+			{
+				user: "sminu", 
+				message: "learn java", 
+				dateCreated: new Date()
+			}
+		]
+	}
+);
+
+
+11. Inserting Multiple Documents / Items: 
+	>>> db.<collection_name>.insertMany([{}, {}]);
+
+example: 
+db.posts.insertMany([
+	{
+		title: 'Java Overview', 
+		description: 'Learn more about the Java', 
+		by: 'Jims', 
+		url: 'https://java.com', 
+		tags: [
+			'mobile apps', 
+			'web development'
+		], 
+		likes: 124, 
+		comments: [
+			{
+				user: "johny", 
+				message: "i require to learn java", 
+				dateCreated: new Date()
+			}, 
+			{
+				user: "sminu", 
+				message: "learn java", 
+				dateCreated: new Date()
+			}
+		]
+	}, 
+	{
+		title: 'Php Overview', 
+		description: 'Learn more about the Php', 
+		by: 'Jims', 
+		url: 'https://php.net', 
+		tags: [
+			'web application development', 
+			'cms'
+		], 
+		likes: 165, 
+		comments: [
+			{
+				user: "johny", 
+				message: "i require to learn java", 
+				dateCreated: new Date()
+			}, 
+			{
+				user: "sminu", 
+				message: "learn java", 
+				dateCreated: new Date()
+			}
+		]
+	}, 
+	{
+		title: 'Python Overview', 
+		description: 'Learn more about the Python', 
+		by: 'Jims', 
+		url: 'https://python.com', 
+		tags: [
+			'python', 
+			'modules'
+		], 
+		likes: 241, 
+		comments: [
+			{
+				user: "johny", 
+				message: "i require to learn java", 
+				dateCreated: new Date()
+			}, 
+			{
+				user: "sminu", 
+				message: "learn java", 
+				dateCreated: new Date()
+			}
+		]
+	}
+]);
+
+example: inserting documents by customID
+>> db.<collection_name>.insertMany([{_id: 1, ....}])
+
+12. Retrieving all Documents: 
+	>>> db.<collection_name>.find()
+	>>> db.<collection_name>.find().pretty()
+
+example:
+>>> use orenatuts
+>>> db.createCollection('empDetails');
+>>> db.<collection_name>.insertMany([{}, {}])
+db.empDetails.insertMany([
+	{
+		first_name: "john", 
+		last_name: "hou", 
+		age: 25, 
+		email_address: "john_hou@gmail.com", 
+		phone_number: "855445445"
+	}, 
+	{
+		first_name: "rachel", 
+		last_name: "chis", 
+		age: 27, 
+		email_address: "rachel_chis@gmail.com", 
+		phone_number: "96436642"
+	}, 
+	{
+		first_name: "shiel", 
+		last_name: "snum", 
+		age: 24, 
+		email_address: "snum.shiel@gmail.com", 
+		phone_number: "435656775"
+	}, 
+]);
+>>> db.empDetails.find();
+
+Querying the Documents:
+13. fetching all documents:
+	>>> db.<collection_name>.find();
+	>>> db.<collection_name>.find().pretty();
+
+14. fetching one document: 
+    >>> db.<collection_name>.findOne();
+    >>> db.<collection_name>.findOne().pretty();
+
+
+commands with people (collection_name)
+fields: 
+{
+  "_id": {
+    "$oid": "6316e6363bae03ff5caf6d98"
+  },
+  "First Name": "Grace",
+  "Last Name": "Nelson",
+  "Gender": "Female",
+  "Age": "21",
+  "Email": "g.nelson@randatmail.com",
+  "Education": "Bachelor",
+  "Salary": "5347",
+  "Marital Status": "Single"
+}
+
+15. AND: 
+    >>> db.<collection_name>.find({$and: [{<key1>: <value1>}, {<key2>: <value2>}]})
+    >>> db.people.find({$and: [{"First Name": "Grace"}, {"Age": "21"}]});
+
+16. OR: 
+    >>> db.<collection_name>.find({$or: [{<key1>: <value1>}, {<key2>: <value2>}]})
+    >>> db.people.find({$or: [{"First Name": "Grace"}, {"Age": "21"}]});
+
+17. AND & OR: 
+    >>> db.<collection_name>.find({<key>: {$gt: <value>}});
+    >>> db.posts.find({"likes": {$gt: 125}});
+    >>> db.posts.find({"by": "ju"});
+    >>> db.posts.find({"likes": {$gt: 125}, $or: [{"by": "clanguage"}, {"title": "c"}]});
+
+18. AND & NOR: 
+    >>> db.<collection_name>.find({<key>: {$gt: <value>}});
+    >>> db.posts.find({"likes": {$gt: 125}});
+    >>> db.posts.find({"by": "ju"});
+    >>> db.posts.find({"likes": {$gt: 125}, $nor: [{"by": "clanguage"}, {"title": "c"}]});
+
+19. NOT: 
+    >>> db.<collection_name>.find({<key>: {$not: {$gt: <value>}}});
+    >>> db.posts.find({"likes": {$not: {$gt: 124}}});
+
+20. UPDATE: 
+    >>> db.<collection_name>.update({<key>: <value>}, {$set: {<key>: <value>}}, {multi: true});
+    >>> db.posts.update({"title": "java"}, {$set: {"title": "jdbc"}}, {multi: true});
+
+21. SAVE: 
+    >>> db.<collection_name>.save({"_id": objectId(), <key>: <value>});
+    >>> db.posts.save({"_id": ObjectId(), "title": "springBoot"});
+
+22. Find One and Update: 
+	>>> db.<collection_name>.findOneAndUpdate({<key>: <value>}, {$set: {<key>: <value>}});
+	>>> db.posts.findOneAndUpdate({title: 'springBoot'}, {$set: {title: 'Hibernate'}});
+
+23. UPDATE ONE: 
+	>>> db.<collection_name>.updateOne({<key>: <value>}, {$set: {<key>: <value>}});
+	>>> db.posts.updateOne({title: 'c'}, {$set: {likes: 100}});
+
+24. UPDATE MANY: 
+	>>> db.<collection_name>.updateMany({<key>: <value>}, {$set: {<key>: <value>}});
+	>>> db.posts.updateMany({likes: {$gt: 150}}, {$set: {likes: 10}});
+
+25. DELETE: 
+	>>> db.<collection_name>.remove({<key>: <value>});
+	>>> db.posts.remove({title: 'c'});
+	>>> db.posts.deleteMany({likes: {$gt: 180}});
+
+26. Projection: 
+	>>> db.<collection_name>.find({}, {<key>: 1, _id: 0});
+	>>> db.posts.find({}, {title: 1, _id: 0});
+	>>> db.posts.find({}, {title: 1, likes: 1, _id: 0});
+
+27. Limit: 
+	>>> db.<collection_name>.find().limit(3);
+	>>> db.posts.find().limit(3);
+
+	>>> db.<collection_name>.find({}, {<key>: 1, _id: 0}).limit(3);
+	>>> db.posts.find({}, {title: 1, _id: 0});
+	>>> db.posts.find({}, {title: 1, likes: 1, _id: 0}).limit(3);
+
+28. Skip: 
+	>>> db.<collection_name>.find({}, {<key>: 1, _id: 0}).limit(3).skip(1);
+	>>> db.posts.find({}, {title: 1, likes: 1, _id: 0}).limit(3).skip(1);
+
+29. Sort: 
+	>>> db.<collection_name>.find().sort({<key>: 1});
+	>>> db.<collection_name>.find().sort({<key>: -1});
+	>>> db.posts.find().sort(title: 1);
+
+	>>> db.<collection_name>.find({}, {<key>: 1, _id: 0}).limit(3).skip(1).sort(<key>: 1);
+	>>> db.posts.find({}, {title: 1, likes: 1, _id: 0}).limit(3).skip(1).sort({title: 1});
+
+30. Index: 
+	- CreateIndex: 
+	>>> db.<collection_name>.createIndex({<key>: 1});
+	>>> db.posts.createIndex({title: 1});
+
+	- GetIndexes: 
+	>>> db.<collection_name>.getIndexes({<key>: 1});
+	>>> db.posts.getIndexes({title: 1});
+
+	- DropIndex: 
+	>>> db.<collection_name>.dropIndex({<key>: 1});
+	>>> db.posts.dropIndex({title: 1});
+
+	- DropIndexes: 
+	>>> db.<collection_name>.dropIndexes({<key>: 1, <key2>: 1});
+	>>> db.posts.dropIndexes({title: 1, likes: 1});
+
+31. Aggregation: 
+	$sum:
+	>>> db.posts.aggregate([{$group: {_id: "$likes", num_tutorial: {$sum: 1}}}]);
+
+	$avg: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", num_tutorial: {$avg: "$likes"}}}]);
+
+	$min: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", num_tutorial: {$min: "$likes"}}}]);
+
+	$max: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", num_tutorial: {$max: "$likes"}}}]);
+
+	$push: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", url: {$push: "$url"}}}]);
+
+	$addToSet: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", url: {$addToSet: "$url"}}}]);
+
+	$first: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", first_url: {$first: "$url"}}}]);
+
+	$last: 
+	>>> db.posts.aggregate([{$group: {_id: "$by", last_url: {$last: "$url"}}}]);
+
+Additional (Computed) Operations: 
+
+equality: >>> db.posts.find({by: 'user1'})
+less than: >>> db.posts.find({likes: {$lt: 50}})
+less than or equals to: >>> db.posts.find({likes: {$lte: 50}})
+greater than: >>> db.posts.find({likes: {$gt: 50}})
+greater than or equals to: >>> db.posts.find({likes: {$gte: 50}})
+not equals: >>> db.posts.find({title: {$ne: 'c'}})
+values in an array: >>> db.posts.find({'name': {$in: ['val1', 'val2']}})
+values not in an array: >>> db.posts.find({'name': {$nin: ['val1', 'val2']}})

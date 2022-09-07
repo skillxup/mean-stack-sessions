@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        class Person {
+            constructor(name, country) {
+                this.name = name;
+                this.country = country;
+            }
+
+            getInfo() {
+                alert(`hi i am ${this.name} from ${this.country}`);
+            }
+
+            setInfo(name, country) {
+                this.name = name;
+                this.country = country;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var p1 = new Person("john", "germany");
+            p1.getInfo();
+            p1.setInfo("jap", "qwert");
+            p1.getInfo();
+
+            var p2 = new Person("peter", "canada");
+            p2.getInfo();
+
+            var p3 = new Person("smith", "india");
+            p3.getInfo();
+
+        </script>
+    </div>
+</body>
+</html>

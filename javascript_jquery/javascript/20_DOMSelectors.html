@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Javascript Concepts </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <ul>
+            <li>Android</li>
+            <li>IOS</li>
+        </ul> -->
+        
+        <!-- selecting elements by ID & Tag Name -->
+        <p id="mark"> this is a sample para of text </p>
+        <p>this is another sample para of text </p>
+
+        <p>--------------------------------------------</p>
+
+        <!-- selecting elements by Class Name & Tag Name -->
+        <p class="test"> this is a para of text </p>
+        <div class="block test"> this is another para of text </div>
+        <p> this is one more para of text </p>
+
+        <p>--------------------------------------------</p>
+
+        <!-- selecting elements with CSS Selectors -->
+        <ul>
+            <li>Bread</li>
+            <li class="tick">Coffee</li>
+            <li>Pineapple Cake</li>
+        </ul>
+
+        <p>--------------------------------------------</p>
+
+        <script>
+            // selecting elements by ID
+            var match = document.getElementById("mark");
+            match.style.background = "#aeaeae";
+
+            // selecting elements by Class Name
+            var matches = document.getElementsByClassName("test");
+            document.write(`no of selected elements - getElementsByClassName: ${matches.length} <br />`);
+            matches[0].style.fontWeight = "bold";
+            matches[matches.length - 1].style.fontStyle = "italic";
+
+            // for(var elem in matches) {
+            //     matches[elem].style.background = "#efefef";
+            // }
+
+            // selecting elements by Tag Name
+            var matches = document.getElementsByTagName("p");
+            document.write(`no of selected elements - getElementsByTagName: ${matches.length} <br />`);
+
+            // for(var elem in matches) {
+            //     matches[elem].style.background = "#efefef";
+            // }
+
+            // selecting elements with CSS Selectors
+            var matches = document.querySelectorAll("ul li");
+            document.write(`no of selected elements - querySelectorAll: ${matches.length} <br />`);
+
+            for(var elem of matches) {
+                document.write(elem.innerHTML + "<br />");
+            }
+
+            var matches = document.querySelectorAll("ul li.tick");
+            document.write(`no of selected elements - querySelectorAll: ${matches.length} <br />`);
+
+            for(var elem of matches) {
+                document.write(elem.innerHTML + "<br />");
+            }
+        </script>
+    </div>
+</body>
+</html>

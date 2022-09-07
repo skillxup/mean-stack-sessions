@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+
+        <div id="main">
+            <!-- afterbegin -->
+            <h1 id="title"> heading </h1>
+            <p id="hint"> this is some sample text </p>
+            <!-- beforeend -->
+        </div>
+
+        <script>
+            // creating a new DIV element
+            var newDiv = document.createElement("div");
+
+            // creating a text node
+            var newContent = document.createTextNode('hello john, how are you');
+
+            // adding the text node to the newly created DIV
+            // newDiv.appendChild(newContent);
+
+            // adding the newly created element and its content into the DOM
+            // var currentDiv = document.getElementById("main");
+            
+            // document.body.appendChild(newDiv, currentDiv);
+
+            // document.body.insertBefore(newDiv, currentDiv);
+
+            // currentDiv.innerHTML += `<p>this is <strong>newly inserted</strong> node </p>`;
+
+            var mainDiv = document.getElementById("main");
+            mainDiv.insertAdjacentHTML("beforebegin", "<p>this is beforebegin</p>");
+            mainDiv.insertAdjacentHTML("afterbegin", "<p>this is afterbegin</p>");
+            mainDiv.insertAdjacentHTML("afterend", "<p>this is afterend</p>");
+            mainDiv.insertAdjacentHTML("beforeend", "<p>this is beforeend</p>");
+
+            // removing existing elements from DOM
+            var parentElem = document.getElementById("main");
+            var childElem = document.getElementById("hint");
+            // parentElem.removeChild(childElem);
+            // or
+            // childElem.parentNode.removeChild(childElem);
+
+            // replacing existing elements in the DOM
+            var parentElem = document.getElementById("main");
+            var oldPara = document.getElementById("hint");
+
+            // creating a new element
+            var newPara = document.createElement("p");
+            var newContent = document.createTextNode("this is a new text content");
+            newPara.appendChild(newContent);
+
+            parentElem.replaceChild(newPara, oldPara);
+        </script>
+</body>
+</html>

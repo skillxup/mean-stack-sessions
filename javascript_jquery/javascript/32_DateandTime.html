@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var d = new Date();
+            document.write(`d: ${d} <br />`);
+            document.write('------------------------------<br />');
+
+            var d = new Date(2012, 07, 17, 12, 00, 00);
+            document.write(`d: ${d} <br />`);
+            document.write('------------------------------<br />');
+
+            var d = new Date("17 Aug 2022");
+            document.write(`d: ${d} <br />`);
+            document.write('------------------------------<br />');
+
+            var d = new Date(15131533222);
+            document.write(`d: ${d} <br />`);
+            document.write('------------------------------<br />');
+
+            var d = new Date();
+            document.write(`d: ${d.toString()} <br />`);
+            document.write('------------------------------<br />');
+
+            var d = new Date();
+            document.write(`d: ${d.getDate()} <br />`);
+            document.write('------------------------------<br />');
+
+            d.setDate(d.getDate() + 12);
+            document.write(`d: ${d} <br />`);
+            document.write('------------------------------<br />');
+        </script>
+    </div>
+</body>
+</html>

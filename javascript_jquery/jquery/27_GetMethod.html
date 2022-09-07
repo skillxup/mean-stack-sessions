@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Concepts</title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="customScripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $.get("date-time.php", function(data) {
+                    $("#result").html(data);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="result">
+        <h4>content of the DIV box - will be replace with Server Date and Time </h4>
+    </div>
+
+    <button type="button"> load Date and Time </button>
+    <script>
+        
+    </script>
+</body>
+</html>

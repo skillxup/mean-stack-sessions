@@ -1,0 +1,13 @@
+{
+    "employee_details": {
+        "_id": "ObjectId(u752hw42tt42eqttf)", 
+        "emp_id": "155HYU"
+    }, 
+    
+    "personal_details": {
+        "first_name": "rad", 
+        "last_name": "mil", 
+        "date_of_birth": "1446-9-23"
+    }
+
+}

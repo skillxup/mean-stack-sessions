@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function dataSave() {
+            var myContent = document.getElementById("myText").value;
+            localStorage.setItem("myContent", myContent);
+        }
+
+        function dataLoad() {
+            var myContent = localStorage.getItem("myContent");
+            document.getElementById("text").innerHTML = myContent;
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <textarea id="myText"></textarea>
+        <button type="button" onclick="dataSave()"> save </button>
+        <button type="button" onclick="dataLoad()"> load </button>
+        <div id="text"></div>
+        <script>
+            
+        </script>
+    </div>
+</body>
+</html>

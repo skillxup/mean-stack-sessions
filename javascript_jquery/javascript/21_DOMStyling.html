@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+        #intro {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <p id="intro"> this is a para </p>
+        <!-- <p id="intro" style="color: yellow; font-family: inherit; text-decoration: underline;"> this is a para </p> -->
+        <p>this is another para </p>
+
+        <!-- add CSS Classes to Elements -->
+        <div id="info" class="disabled">
+            something very important!
+        </div>
+        <script>
+            // setting inline styles on Elements
+            var elem = document.getElementById("intro");
+            // elem.style.color = "blue";
+            // elem.style.fontSize = "18px";
+            // elem.style.fontWeight = "bold";
+
+            // getting style information from Elements
+            // document.write(`getting style color info: ${elem.style.color} <br />`);
+            // document.write(`getting style fontFamily info: ${elem.style.fontFamily} <br />`);
+            // document.write(`getting style textDecoration info: ${elem.style.textDecoration} <br />`);
+            // document.write(`------------------------------------<br />`);
+
+            // computed style
+            var styles = window.getComputedStyle(elem);
+            document.write(`getPropertyValue - color: ${styles.getPropertyValue("color")} <br />`);
+            document.write(`getPropertyValue - font-size: ${styles.getPropertyValue("font-size")} <br />`);
+            document.write(`getPropertyValue - color: ${styles.getPropertyValue("font-weight")} <br />`);
+
+            // add CSS Classes to Elements
+            var elem = document.getElementById("info");
+            // elem.className = "note";
+            // elem.className += " highlight";
+
+            // add()
+            elem.classList.add("hide");
+            elem.classList.add("note", "highlight");
+
+            // remove()
+            elem.classList.remove("hide");
+            elem.classList.remove("note", "highlight");
+
+            // toggle()
+            document.write(`toggle: ${elem.classList.toggle("vi")} <br />`);
+
+            // determine
+            if(elem.classList.contains("highlight")) {
+                document.write(`the specified class exists on the element!`)
+            } else {
+                document.write(`the specified class does not exists on the element!`)
+            }
+        </script>
+    </div>
+</body>
+</html>

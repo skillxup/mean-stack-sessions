@@ -1,0 +1,119 @@
+-> What is MongoDB?
+	- MongDb is an Open Source NoSql Database
+	- It is a Cross Platform, Document Oriented Database that provides a High Performance, High Availability, Easy Scaliability
+	- It works an Concept of Collections and Documents
+
+-> Terminology:
+	- Database: It is a physical container for collections, each database gets its own set of files on the file system. a single MongoDb server typically has multiple databases.
+	- Collection: a Collection is a group of MongoDb documents, it is equivalent of an RDBMS Table., a Collection exists within a Single Database., Collections do not enforce a Schema., 
+	- Document: the Document with in a Collection has different Fields., a Document is a set of key - value pairs, Document have dynamic schema.
+	- Schema: the Schema means that documents in the same Collection do not need to have the set of fields or structure., and common fields in a collection's documents may hold different types of Data,
+
+	- RDBMS: Database, Table, Tuple / Row, Column, Join, Primary Key
+	- MongoDb: Database, Collection, Document, Field, Embedded Documents, Primary Key
+
+	- Sample Document: example: sample_document.json
+
+-> Advantages of MongoDb:
+	- Schema Less
+	- Structure of Single Object is Clear
+	- No Complex Joins
+	- Supports Dynamic Queries on Documents
+
+-> Why use MongoDb?
+	- Document Oriented Storage
+	- Index of any Attribute
+	- Replication and High Availability
+	- Auto-Sharding
+
+-> Where to use MongoDb?
+	- BigData
+	- CMS
+
+-> Env., Setup
+-> Check Db: 
+	>>> db.help();
+	>>> db.stats();
+
+-> Data Modelling: 
+	- Data in MongDb has a flexible schema. Documents in the same Collection.
+	- Data Model Design: 
+		- MongoDb provides 2 types of Data Models:
+			1. Embedded Data Model (De-Normalize) - In this Model, you cam Embed all the Related Data in a Single Document.
+
+			2. Normalize Data Model - You can Refer Sub Documents in the Original Documents
+
+-> Considerations while Designing the Schema: 
+	1. Combine Objects into One Document
+	2. Duplicate the Data because the Disk Space is Cheap
+	3. Do Joins while Write, and Not to Read
+	4. Optimize your Schema
+	5. Do Complex Aggregation
+
+-> Database
+	- Create, Show and Drop Database
+
+-> Collections
+	- Create: db.createCollection(collectName [, options])
+	- Options: 
+		- capped - capped collection is a fixed size collection that automatically overwrites its oldest entries when it reaches the maximum size, if we set it as true., 
+		- autoIndexId - if you set it as true, the autoIndexId will be created as indexId
+		- size - same as capped
+		- max - setting the no of documents allowed in the capped collections
+	
+
+-> Documents: 
+	- db.collection_name.insertOne({})
+	- db.collection_name.insertMany([{}, {}])
+
+-> Datatypes: 
+	- the mongodb supports different types of data
+		1. string
+		2. integer
+		3. boolean - true / false
+		4. double - floating point values
+		5. min / max keys - used to compare a value against the lowest and highest bson elements
+		6. arrays - store arrays or list or multiple values into one
+		7. timestamp - recording when a document has been either added or modified
+		8. object - used for embedded documents
+		9. null - used to store null value
+		10. symbol - used identically to a string
+		11. date - store the current date or time
+		12. objectID - used to store the document ID
+		13. binary data - used to store the binary data
+		14. code - used to store javascript code into document
+		15. regular expression - used to store regular expression
+
+-> Insert Document
+	- Object ID
+	- Custom ID
+-> Fetching Documents
+-> Fetching Documents using Conditions
+-> Operators: AND, OR, NOT, NOR
+-> Updating Documents
+-> Deleting Documents
+
+-> Projection: 
+	- selecting only the necessary data rather than selecting the whole of the data of a document
+
+-> Limit: 
+	- limiting the no of records 
+
+-> Skip: 
+	- skipping the no of documents
+
+-> Sort: 
+	- sorting the methods: sort()
+
+-> Indexing 
+	- indexes supports the effecient resolution of queries
+
+-> Aggregation
+	- the aggregation operations process data records and return computed results
+	- the aggregation operations group values from multiple documents together 
+	- expressions: $sum, $avg, $min, $max, $push, $addToSet, $first, $last
+
+-> Pipeline
+	- a possibility to execute an operation on some input and use the output as the input for the next command
+	- expressions: $project, $match, $group, $sort, $skip, $limit, $unwind
+

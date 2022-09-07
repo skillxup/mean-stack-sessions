@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            document.write(`Math.PI: ${Math.PI} <br />`);
+            document.write(`abs(): ${Math.abs(-46)} <br />`);
+            document.write(`Math.random(): ${Math.floor(Math.random() * 365)} <br />`);
+            document.write(`Math.max(): ${Math.max(1, 8, -9, 4, 6)} <br />`);
+
+            // apply()
+            var numbers = [1, 4, 8];
+            document.write(`max(): ${Math.max.apply(null, numbers)} <br />`);
+            document.write(`max(): ${Math.max(...numbers)} <br />`);
+        </script>
+    </div>
+</body>
+</html>

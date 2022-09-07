@@ -1,0 +1,47 @@
+{
+    "_id": "POST_ID", 
+    "title": "Title_of_Post", 
+    "description": "Post_Description", 
+    "by": "Post_By", 
+    "url": "Post_Url", 
+    "tags": [
+        "Tag1", 
+        "Tag2", 
+        "Tag3"
+    ], 
+    "likes": "No_of_Likes", 
+    "comments": [
+        {
+            "user": "Commented_By", 
+            "message": "Commented_Message", 
+            "dateCreated": "Commented_Date", 
+            "like": "No_of_Likes"
+        }, 
+        {
+            "user": "Commented_By", 
+            "message": "Commented_Message", 
+            "dateCreated": "Commented_Date", 
+            "like": "No_of_Likes"
+        }, 
+        {
+            "user": "Commented_By", 
+            "message": "Commented_Message", 
+            "dateCreated": "Commented_Date", 
+            "like": "No_of_Likes"
+        }
+    ], 
+    "users": [
+        {
+            "user_id": "User_Id", 
+            "user_name": "User_Name"
+        }, 
+        {
+            "user_id": "User_Id", 
+            "user_name": "User_Name"
+        }, 
+        {
+            "user_id": "User_Id", 
+            "user_name": "User_Name"
+        }
+    ]
+}

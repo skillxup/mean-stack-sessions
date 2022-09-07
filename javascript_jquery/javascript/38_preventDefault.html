@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post" id="users" action="usersprocess.php">
+            <input type="text" name="firstname" id="firstname" />
+            <input type="submit" name="submit" value="submit" id="submitBtn" />
+        </form>
+
+        <script>
+            var btn = document.getElementById("submitBtn");
+            btn.addEventListener("click", function(event) {
+                var name = document.getElementById("firstname").value;
+                alert("sorry, " + name + " the preventDefault() won't let you to submit this form!" );
+                event.preventDefault();
+            })
+        </script>
+    </div>
+</body>
+</html>

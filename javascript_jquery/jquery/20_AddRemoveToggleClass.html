@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Concepts</title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+        .page-header {
+            color: red;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background: yellow;    
+        }
+
+        .hint {
+            font-style: italic;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="customScripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("h1").addClass("page-header");
+                $("p.hint").addClass("highlight");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1> Its Heading </h1>
+    <p> This is a Sample Para... </p>
+    <p class="hint"><strong>Tip:</strong> we are discussing about Add / Remove / Toggle Class </p>
+    <button type="button"> Add Class </button>
+</body>
+</html>

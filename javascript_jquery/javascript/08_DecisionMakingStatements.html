@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // decision making statements: if, if else, if if, if else if else, switch case 
+            // in js: the values either 0, null,  (space), none, false - are considered as fals
+            let a = 0;
+            if(a) {
+                document.write(`the value of a: ${a} is valid! <br />`);
+            } else {
+                document.write(`the value of a: ${a} is invalid! <br />`);
+            }
+
+            let age = 20;
+            if(age > 18) {
+                document.write(`the value of age: ${age} is greater than 18! <br />`);
+                if(age <= 24) {
+                    document.write(`the value of age: ${age} is either lesser than or equal to 24! <br />`);
+                } else if(age <= 35) {
+                    document.write(`the value of age: ${age} is either lesser than or equal to 35! <br />`);
+                }
+            } else {
+                document.write(`the value of age: ${age} is either qual or lesser than 18! <br />`);
+            }
+
+            let username = 'john';
+            switch(username) {
+                case 'pill': 
+                    document.write(`the username: ${username} is matching with 'pill' <br />`);
+                    break;
+
+                case 'john': 
+                    document.write(`the username: ${username} is matching with 'john' <br />`);
+                    break;
+
+                case 'devia': 
+                    document.write(`the username: ${username} is matching with 'devia' <br />`);
+                    break;
+
+                default: 
+                    document.write(`none of the case matched<br />`);
+
+            }
+        </script>
+    </div>
+</body>
+</html>

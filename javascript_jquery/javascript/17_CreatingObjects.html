@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // creating / declaring the objects
+            var person = {
+                name: "peter", 
+                age: 28, 
+                gender: "male"
+            };
+            document.write(`name: ${person.name} <br />`);
+            document.write("-----------------------------<br />");
+
+            var person = {
+                "name": "peter", 
+                "age": 28, 
+                "gender": "male"
+            };
+            document.write(`name: ${person.name} <br />`);
+            document.write(`name: ${person["name"]} <br />`);
+            document.write("-----------------------------<br />");
+
+            // var key = prompt("enter any property name to get its value");
+            // document.write(`${key}: ${person[key]} <br />`);
+            // document.write("-----------------------------<br />");
+
+            // looping through object's properties
+            for(var i in person) {
+                document.write(`${i}: ${person[i]}<br />`);
+            }
+            document.write("-----------------------------<br />");
+
+            // setting object's properties
+            person.country = "usa";
+            document.write(`country: ${person.country} <br />`);
+            document.write("-----------------------------<br />");
+
+            person["email"] = "peterpark@gmail.com";
+            document.write(`email: ${person.email} <br />`);
+            document.write("-----------------------------<br />");
+
+            // updating object's properties
+            person["age"] = 45;
+            document.write(`age: ${person.age} <br />`);
+            document.write("-----------------------------<br />");
+
+            // deleting object's properties
+            delete person.age;
+            document.write(`age: ${person.age} <br />`);
+            document.write("-----------------------------<br />");
+
+            // declaring an object with methods
+            var person = {
+                // properties
+                name: "peter", 
+                age: 28, 
+                gender: "male", 
+
+                // methods
+                displayName: function() {
+                    document.write(`
+                        person details <br /> 
+                        name: ${this.name} <br /> 
+                        age: ${this.age} <br /> 
+                        gender: ${this.gender} <br /> 
+                    `);
+                }
+            };
+
+            person.displayName();
+            document.write("-----------------------------<br />");
+
+            person["displayName"]();
+            document.write("-----------------------------<br />");
+        </script>
+    </div>
+</body>
+</html>

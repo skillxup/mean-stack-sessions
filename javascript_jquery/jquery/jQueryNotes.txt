@@ -1,0 +1,140 @@
+-> What is jQuery?
+    - jQuery is a light-weight javascript library
+    - 'write less, do more'
+    - It's easy-to-use API's makes things like HTML document travesel and manipulations, event handlers, adding animation effects to a web page
+    - to create an Ajax based applications
+
+-> What you can do with jQuery?
+    - can easily select elements to perform manipulation
+    - create effects like show or hide elements, sliding transition etc., 
+    - complex css animation
+    - manipulation DOM elements and their attributes 
+
+-> Advantages: 
+    - saves a lot of time
+    - simplify common javascript tasks
+    - easy to use
+
+-> Implementing jQuery Syntax
+-> Applying Styles to CSS Selectors
+-> Compound CSS Selectors
+-> Custom Selector
+-> Events
+    click()
+    dbclick()
+    hover()
+    mouseenter()
+    mouseleave()
+    keypress()
+    change()
+    focus()
+    blur()
+    submit()
+
+    ready()
+
+-> Show / Hide Effects
+    - hide()
+    - show()
+
+-> Toggle
+    - toggle()
+
+-> Fading Effects
+    - fadeIn()
+    - fadeOut()
+    - fadeToggle()
+    - fadeTo()
+
+-> Sliding Effects
+    - slideUp()
+    - slideDown()
+    - slideToggle()
+
+-> Animation Effects: 
+    - animate()
+    - stop()
+    - hover()
+
+-> Chaining Effects: 
+-> CallBack: 
+-> Getters and Setters: 
+    - text()
+    - html()
+    - attr() 
+    - val()
+
+-> Insert Content
+    - append()
+    - prepend()
+    - before()
+    - after()
+    - wrap()
+
+-> Remove Content
+    - empty()
+    - remove()
+    - unwrap()
+    - removeAttr()
+
+-> Add and Remove Css Class's: 
+    - addClass()
+    - removeClass()
+    - toggleClass()
+
+-> Get and Set Css Properties: 
+    - css()
+
+-> jQuery Dimensions: 
+    - height() 
+    - innerHeight() 
+    - outerHeight()
+    - width() 
+    - innerWidth() 
+    - outerWidth()
+
+-> jQuery Traversing: 
+-> jQuery Traversing Ancestors: 
+    - parent()
+    - parents()
+    - parentsUntill()
+
+-> jQuery Traversing Descendants: 
+    - children()
+    - find()
+
+-> jQuery Traversing Siblings: 
+    - siblings() 
+    - next() 
+    - nextAll() 
+    - nextUntill() 
+    - prev() 
+    - prevAll() 
+    - prevUntill() 
+
+-> jQuery Filtering: 
+    - filter() 
+    - first() 
+    - last() 
+    - eq() 
+    - slice() 
+    - has() 
+    - not() 
+
+-> jQuery Ajax: 
+    - ajax stands for Asynchronous Javascript and XML 
+    - loading data from the server to the web browser without reloading the whole page
+
+    - jQuery Ajax Load: 
+        - load()
+        - responseTxt - it contains the resulting content if the request succeeds
+        - statusTxt - it contains the status of the request such as success or error 
+        - jqXHR - contains the XMLRequest object
+    - Loading Fragments
+
+    - jQuery Ajax Get and Post Request
+        - $.get()
+        - $.post()
+
+-> jQuery NoConflict:
+    - noConflict()

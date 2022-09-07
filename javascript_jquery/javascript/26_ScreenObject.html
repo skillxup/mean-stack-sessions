@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function getResolution() {
+            // var w = screen.width;
+            // var h = screen.height;
+
+            var w = screen.availWidth;
+            var h = screen.availHeight;
+
+            var cD = screen.colorDepth;
+            var pD = screen.pixelDepth;
+            
+            var res = `the width: ${w}, and height: ${h} of the screen., colorDepth: ${cD}, and pixelDepth: ${pD}`;
+            document.getElementById("res").innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button" onclick="getResolution()"> get resolution </button>
+
+        <div id="res"></div>
+        <script>
+            // get size of the window
+
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            
+            // try {
+            //     var greet = "hi there!";
+            //     document.write(`greet: ${greet} <br />`);
+            //     document.write(`welcome: ${welcome} <br />`);
+            // } catch(err) {
+            //     document.write(`unable to execute the value of welcome!`);
+            // } finally {
+            //     document.write(`finally statement executes at last`);
+            // }
+
+            var num = prompt("enter a positive integer between 0 to 10");
+            var start = Date.now();
+
+            try {
+                if(num > 0 && num <= 10) {
+                    var cal = Math.pow(num, num);
+                    document.write(`cal of pow: ${cal} <br />`);
+                } else {
+                    throw new Error("an invalid value is entered");
+                }
+            } catch(err) {
+                document.write(`err: ${err.message} <br />`);
+            } finally {
+                document.write(`execution took: ${Date.now() - start}ms <br />`);
+            }
+
+            // type error
+            var num = 123;
+            num.toLowerCase();
+            
+        </script>
+    </div>
+</body>
+</html>

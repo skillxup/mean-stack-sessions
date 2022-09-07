@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+
+    </style>
+
+    <script src="customScripts.js"></script>
+    <script>
+        function myFunc() {
+            alert('hello, its executed!');
+        }
+
+        function showTime() {
+            var d = new Date();
+            document.getElementById("res").innerHTML = d.toLocaleTimeString();
+        }
+
+        setInterval(showTime, 1000);
+
+        function delayedAlert() {
+            timeoutID = setTimeout(showAlert, 2000);
+            
+        }
+
+        function showAlert() {
+            alert('executed after 2 seconds');
+        }
+
+        function clearAlert() {
+            clearTimeout(timeoutID);
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button" onclick="setTimeout(myFunc, 2000)"> click me </button>
+
+        <div id="res"></div>
+
+        <button type="button" onclick="delayedAlert()"> show alert after 2 sec </button>
+
+        <button type="button" onclick="clearAlert()"> cancel alert before it display </button>
+        <script>
+            
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // navigator Object
+            document.write(`window.navigator.language: ${window.navigator.language} <br />`);
+
+            if(navigator.onLine) {
+                document.write('user is onLine <br />');
+            } else {
+                document.write('user is offLine <br />');
+            }
+
+            if(navigator.cookieEnabled) {
+                document.write('yes, cookies enabled <br />');
+            } else {
+                document.write('no, cookies are not enabled <br />');
+            }
+
+            document.write(`browser Language: ${navigator.language} <br />`);
+
+            // browser name and version information
+            // appName, appVersion, appCodeName, userAgent, platform
+
+            // navigator.javaEnabled()
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            var objA = {
+                name: "object A", 
+                say: function(greet, greet2 = '') {
+                    alert(greet + ", " + greet2 + ", " + this.name);
+                }
+            }
+
+            // objA.say('hi');
+
+            var objB = {
+                name: "object B"
+            }
+
+            // objA.say.call(objB, 'hello', 'paul');
+            // objA.say.apply(objB, ['hey', 'john']);
+
+            var numbers = [2, 8, 5, 3, 9, 5];
+            var max = Math.max.apply(null, numbers);
+            document.write("max: " + max + "<br />");
+
+            var max = Math.max.call(null, 5, 8, 9, 3, 4);
+            document.write("call - max: " + max + "<br />");
+
+            var max = Math.max(...numbers);
+            document.write("max: " + max + "<br />");
+
+            var max = numbers.reduce(function(a, b) {
+                return Math.max(a, b);
+            });
+
+            document.write("reduce - max: " + max + "<br />");
+        </script>
+    </div>
+</body>
+</html>

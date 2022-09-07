@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // defining regular expressions
+            // literal syntax
+            var regex = /^Mr\.$/;
+
+            // constructor syntax
+            var regex = new RegExp("^Mr\\.");
+
+            // pattern matching 
+            // symbols: ., *, +, [], {}, $, |
+
+            // character classes
+            // [abc], [^abc], [a-z], [A-Z], [0-9], [a-zA-Z]
+
+            var regex = /ca[kf]e/;
+            var str = "he was eating cake in the cafe";
+
+            if(regex.test(str)) {
+                document.write(`match found<br />`);
+            } else {
+                document.write(`match not found<br />`);
+            }
+
+            // predefined character classes
+            // ., \d, \s, \D, \S, \w, \' \"
+
+            // repetition quantifiers
+            // p+, p*, p?, p{2}, p{2,3}, p{,3}
+
+            // position anchors
+            // ^p, p$
+
+            // pattern modifiers (flags)
+            // /g, /i, /m - ^ & $
+
+            // alteration
+            // | - /(cat)|dog|bee/
+        </script>
+    </div>
+</body>
+</html>

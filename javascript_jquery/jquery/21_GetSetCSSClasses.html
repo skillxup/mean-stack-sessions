@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Concepts</title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="customScripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".box").click(function() {
+                $(this).css({
+                    "background-color": "yellow", 
+                    "padding": "20px"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box" style="background-color: orange;"></div>
+    <div class="box" style="background-color: #ee82ee"></div>
+    <div class="box" style="background-color: rgb(139, 205, 50);"></div>
+    <div class="box" style="background-color: #f00;"></div>
+
+    <div id="result"></div>
+</body>
+</html>

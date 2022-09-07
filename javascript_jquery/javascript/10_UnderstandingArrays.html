@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script>
+            // array
+            let array = [5, 8, 3, 9, 2, 6];
+            document.write(`the items of array: ${array} <br />`);
+            document.write(`the no of items in the array: ${array.length} <br />`);
+
+            document.write(`the items of array[2]: ${array[2]} <br />`);
+            document.write('-----------------------------<br />');
+
+            for(let i = 0; i < array.length; i++) {
+                document.write(`the value of array[${i}]: ${array[i]} <br />`);
+            }
+            document.write('-----------------------------<br />');
+
+            for(let item in array) {
+                document.write(`the item: ${array[item]} <br />`);
+            }
+            
+            document.write('-----------------------------<br />');
+
+            var colors = ["red", "green", "blue"];
+            for(let color in colors) {
+                document.write(`the color[${color}]: ${colors[color]} <br />`);
+            }
+            document.write('-----------------------------<br />');
+
+            // adding new element into the exisiting array
+            colors.push("cyan");
+            for(let color in colors) {
+                document.write(`the color[${color}]: ${colors[color]} <br />`);
+            }
+
+            document.write('-----------------------------<br />');
+
+            colors.unshift("yellowgreen");
+            for(let color in colors) {
+                document.write(`the color[${color}]: ${colors[color]} <br />`);
+            }
+
+            document.write('-----------------------------<br />');
+
+            // remeving the element
+            document.write(`colors: ${colors} <br />`);
+            var removeItem = colors.pop();
+            document.write(`removed colors: ${colors} <br />`);
+
+            var removeItem = colors.shift();
+            document.write(`removed colors: ${colors} <br />`);
+            document.write('-----------------------------<br />');
+
+            // removing an item at a particular position
+            var removeItem = colors.splice(0, 1);
+            document.write(`removed colors: ${colors} <br />`);
+            document.write('-----------------------------<br />');
+
+            // inserting an item at a particular position
+            insertItem = colors.splice(1, 0, "pink", "yellow");
+            document.write(`insertItem colors: ${colors} <br />`);
+            document.write('-----------------------------<br />');
+
+            // creating a string from a array
+            var colors = ["red", "green", "blue"];
+            document.write(`colors: ${colors} <br />`);
+            document.write(`convert into string: ${colors.join(" / ")} <br />`);
+            document.write('-----------------------------<br />');
+
+            // extracted a portion of an array
+            var colors = ["red", "green", "blue"];
+            document.write(`colors: ${colors} <br />`);
+            var subArr = colors.slice(1, 2);
+            document.write(`subArr: ${subArr} <br />`);
+            document.write('-----------------------------<br />');
+
+            // merging two or more arrays
+            var pets = ["cat", "dog", "parrot"];
+            var wilds = ["tiger", "wolf", "zebra"];
+
+            var animals = pets.concat(wilds);
+            document.write(`animals: ${animals} <br />`);
+            document.write('-----------------------------<br />');
+
+            // searching through an array
+            var fruits = ["apple", "banana", "mango", "orange", "papaya"];
+            document.write(`fruits: ${fruits} <br />`);
+            document.write(`indexOf fruits: ${fruits.indexOf("banana")} <br />`);
+            document.write('-----------------------------<br />');
+
+            var arr = [1, 0, 3, 1, false, 5, 1, 4, 7];
+            document.write(`arr: ${arr} <br />`);
+            document.write(`include: ${arr.includes(3)} <br />`);
+            document.write('-----------------------------<br />');
+
+            var result = arr.find(function(element) {
+                return element > 5;
+            });
+            document.write(`result with find: ${result} <br />`);
+            document.write('-----------------------------<br />');
+
+            var result = arr.findIndex(function(element) {
+                return element > 5;
+            });
+            document.write(`result with findIndex: ${result} <br />`);
+            document.write('-----------------------------<br />');
+
+            var result = arr.filter(function(element) {
+                return element > 5;
+            });
+            document.write(`resfult with filter: ${result} <br />`);
+            document.write('-----------------------------<br />');
+        </script>
+    </div>
+</body>
+</html>

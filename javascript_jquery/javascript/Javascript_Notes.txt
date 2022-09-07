@@ -1,0 +1,235 @@
+-> What is Javascript?
+    - Javascript is an Open Source Client Side Scripting / Programming Language
+    - To make the Web Pages more Interactivity
+
+-> What we can do with Javascript?
+    - Modify the Content of a Web Page by Adding / Removing
+    - Change the Style and Position of the Element
+    - Monitor Events like., Click, Hover, Blur, Change, Focus, etc., 
+    - Perform and Control the Trasitions and Transforms like Animations
+    - Display the Popups like., alert(), confirm(), prompt()
+    - Perform Actions on Inputs
+
+-> Getting Started:
+    - External
+    - Embedded
+    - Inline
+
+-> Display the Data: 
+    - There are 3 different ways
+    - document.write()
+    - console.log() / console.warn() / console.error()
+    - alert() / confirm() / prompt()
+
+-> Commenting: 
+    - Skipping the Statement(s) at the time of Execution
+    - There are 2 ways of Commenting
+        1. Single - // ............. 
+        2. Multi - /* ..... */
+
+-> Data Types: 
+    - Data: a data is a value which it can be presented in the results
+    - Types of Data: 
+        - There are 2  different data types: 
+        1. Primitive 
+            1. Number: 0 - 9; 643, 45, -355, -12, 4e3, 4**32
+            2. String: a - z; A - Z; 0 - 9; %$^^%$# - ' .... ' / " ... " / ` ... `
+            3. Boolean: true / false
+
+        2. Non Primitive
+
+-> Identifiers and Keywords: 
+    - Identifiers: an Identifier is a name which is used to Identify the Concept: Variable, Functions, Arrays, Object, etc., 
+    - Rules in Declaring the Identifiers: 
+        1. The Starting Character should be either a - z, A - Z, _
+        2. From the Second Character, it can be either a - z, A - Z, 0 - 9, _ 
+        3. No Spaces are Allowed
+        4. No Symbols are Allowed except _
+        5. Can be a Combination of LowerCase and UpperCase Characters
+
+    - examples: username, _username, user_name, userName, _userName, 1num (x)
+
+-> Keywords: 
+    - a Keyword is a Builtin / PreDefined
+    - list of Keywords: if, async, promise, class, function etc., 
+
+-> Declaring the Variables: 
+    - What is a Variable? 
+    - a Variable is a name which is used to Store / Hold the Value
+
+    - There are 3 different ways to declare the variables: 
+        1. var 
+        2. let 
+        3. const 
+
+-> With the Keyword of 'var'
+-> With the Keyword of 'let'
+-> With the Keyword of 'const'
+
+-> Working with Operators:
+    - an operator is a symbol which is used to evaluate the expression
+    - there are 
+        1. arithmatic operators 
+        2. assignent operators 
+        3. comparision (relational operators) 
+        4. conditional (ternary) operators 
+        5. logical operators
+
+-> Statements:
+    1. Decision Making Statements: 
+        - if, if else, if if, if else if else, switch case
+    2. Loop Statements: 
+        - while, do while, for 
+
+-> Array: 
+    - an array is a set of diferent items / elements 
+
+-> Functions: 
+    - a function is re usable set of statements
+    - which can be accessible at any point of time and / or n no of places
+    - function call and its defintion
+    - passing parameters to function 
+    - return statement
+    - anonymous function
+    - arrow function
+
+    - functions with event handlers
+
+-> Events and Event Handlers:
+    - list of some event handlers: onclick, onblur, onfocus, onchange etc., 
+
+-> Strings: 
+-> Numbers: 
+-> Array: 
+-> Sorting of Arrays: 
+
+-> Objects: 
+    - an object is a collection of named values
+    - these named values are usually referred to as a properties of an object.
+
+    - manipulating by value vs 
+    - manipulating by reference
+
+    - objects are reference types - when you make copies of them - 
+    you are copying the reference to that object
+
+-> DOM: 
+    - DOM stands for Document Object Model
+    - It is a model to represent the HTML or XML documents
+    - It defines the logical structure of the document and that can manipulated
+    - In the DOM, all parts of the document such as elements, attributes, text, etc., are organized in a hierarchical tree - like structure;
+
+    - Selectors
+    - Styling
+    - GET and SET Attributes
+    - Manipulation
+
+    - Navigation
+        types of DOM Nodes
+            - the DOM tree consists of different types of Nodes., such as., Elements, Text, Comments etc., 
+            - ELEMENT_NODE
+            - TEXT_NODE
+            - COMMENT_NODE
+            - DOCUMENT_NODE
+            - DOCUMENT_TYPE_NODE
+
+    - Objects: 
+        - Window
+        - Screen
+        - Location
+        - History
+        - Navigator
+
+    - Dialog Boxes:
+        - alert()
+        - prompt()
+        - confirm()
+
+    - Timers: 
+        - setTimeout()
+        - setInterval()
+
+    - Date and Time:
+    - Math Operations: 
+
+    - Event Listeners: 
+        - the event listeners are just like 'event handlers' 
+        - except that you can assign as many event listeners as you like to a particular event on particular element
+
+    -> Event Propagation:
+        - the event propagation is a mechanism that defines how events propagate or travel through the DOM tree to arrive its target and what happens to it afterward
+
+        - the capturing phase:
+        - bubbling phase:
+        
+        - stop event propagation: 
+            - event.stopPropagation()
+
+        - preventDefault()
+        <a href="http://www.google.com">google</a>
+    
+    - Borrowing Methods: 
+        - apply(), call()
+
+        - the difference between call() and apply() methods: 
+            - the apply() method is using the list of arguments in array format
+
+    - Hoisting: 
+        - all variables and function declarations are moved or hoisted to the top of their current scope
+
+    - closure: 
+        - a function returns as a reference to another function
+
+    - Getter and Setter functions: 
+    - Strict Mode: 
+
+    - JSON: 
+        - JSON stands for Javascript Object Notation
+        - The JSON is a Character Based Data Transmission between Client and Server
+        - two things: object & array
+
+    - Error Handling: 
+        - try... catch throw finally
+        - Errors: RangeError, ReferenceError, SyntaxError, TypeError
+        
+    - Regular Expressions: 
+        - a Regular Expression can alse called as 'regex' or 'RegExp' 
+        - it a specially formatted text strings to find patterns in text
+        - exec(), test(), search(), match(), replace(), split()
+
+    - Form Validation: 
+        - name, email, mobile, url, password 
+
+    - ES6 Features: 
+        - ES6 full form ECMAScript6
+
+    - Object Declartion
+        - Properties 
+        - Methods
+
+    - Class: 
+        - a class is a template with properties and methods
+        - class definition with constructor
+
+    - Inheritance: 
+
+    - promise: 
+        - 
+
+    - Cookies: 
+        - document.cookie
+        - name="php", 
+        domain="http://php.net", 
+        path="http://php.net/cookies.php", 
+        expiry="date"
+
+    - LocalStorage and SessionStorage:
+        - the data in localStorage doesn't expire
+        - the data in sessionStorage will expire when the page session ends 
+
+        - setItem()
+        - getItem()
+        - removeItem()
+        - clear()
+
+        

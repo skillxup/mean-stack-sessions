@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="formValidation.css" />
+    <style></style>
+
+    <script src="formValidation.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="container">  
+        <form name="contactForm" id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+          <h3>Contact Form</h3>
+          <h4>Contact us for custom quote</h4>
+          
+          <fieldset>
+            <input placeholder="name" type="text" name="name" />
+            <div id="nameErr"></div>
+          </fieldset>
+
+          <fieldset>
+            <input placeholder="Email" type="text" name="email" />
+            <div id="emailErr"></div>
+          </fieldset>
+          
+          <fieldset>
+            <input placeholder="mobile" type="text" name="mobile" />
+            <div id="mobileErr"></div>
+          </fieldset>
+
+          <fieldset>
+            <select name="country">
+                <option> select </option>
+                <option>australia</option>
+                <option>india</option>
+                <option>united states</option>
+                <option>united kingdom</option>
+            </select>
+            <div id="countryErr"></div>
+          </fieldset>
+
+          <fieldset>
+            <input type="radio" name="gender" value="male" /> male 
+            <input type="radio" name="gender" value="female" /> female 
+            <div id="genderErr"></div>
+          </fieldset>
+
+          <fieldset>
+            <input type="checkbox" name="hobbies[]" value="sports" /> sports 
+            <input type="checkbox" name="hobbies[]" value="movies" /> movies  
+            <input type="checkbox" name="hobbies[]" value="music" /> music  
+            <input type="checkbox" name="hobbies[]" value="other" /> other  
+          </fieldset>
+
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+          
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Concepts </title>
+
+    <link rel="stylesheet" href="customStyles.css" />
+    <style></style>
+
+    <script src="customScripts.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="http://www.google.com" target="_blank" id="myLink"> google </a>
+
+        <br />
+
+        <button type="button" id="myBtn"> click me </button>
+
+        <br />
+
+        <script>
+            // getting element's attribute value
+            var link = document.getElementById("myLink");
+            var href = link.getAttribute("href");
+            document.write(`href: ${href} <br />`);
+
+            var target = link.getAttribute("target");
+            document.write(`target: ${target} <br />`);
+
+            // setting attributes on elements
+            var btn = document.getElementById("myBtn");
+
+            btn.setAttribute("class", "click-btn");
+            btn.setAttribute("disabled", "");
+
+            link.setAttribute("href", "https://www.facebook.com");
+
+            // removing attributes from elements
+            link.removeAttribute("href");
+        </script>
+    </div>
+</body>
+</html>
