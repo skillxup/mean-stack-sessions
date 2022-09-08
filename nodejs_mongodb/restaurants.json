@@ -1,0 +1,24 @@
+{
+    "_id": {},
+    "address": {
+      "building": "",
+      "coord": [],
+      "street": "",
+      "zipcode": ""
+    },
+    "borough": "",
+    "cuisine": "",
+    "grades": [
+      {
+        "date": {
+          "$date": {
+            "$numberLong": ""
+          }
+        },
+        "grade": "",
+        "score": 0
+      }
+    ],
+    "name": "",
+    "restaurant_id": ""
+  }
