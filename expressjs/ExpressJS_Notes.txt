@@ -1,0 +1,29 @@
+-> What is an ExpressJS?
+    - an ExpressJS is a Web Application Framework for NodeJS
+    - It provides various features that make Web Application Development
+    - ExpressJS is based on the NodeJS Middleware Module called 'connect' which is in turn uses the 'http' Module
+
+    ExpressJS -> connect -> http -> NodeJS
+
+-> Features of ExpressJS:
+    1. Makes NodeJS Web Application Development Fast and Easy
+    2. Easy to Configure and Customize
+    3. Allows you to define Routes of your Application based on HTTP Methods and URL's
+    4. Includes various Middleware Modules which you can perform additional Tasks on Request and Response
+    5. Easy to Integrate with Different Template Engines like JADE, EJS, etc.
+    6. Allows you to Define an Error Handling Middleware.
+    7. Easy to Serve Static Files and Resources of your Application
+    8. Allows you to Create REST API Server
+    9. Easy to Connect with Databases such as MongoDB, Redis, MySql etc., 
+
+-> Define Routes:
+    - use 'app' object to define different routes of your application
+    - the 'app' object includes get(), post(), put(), and delete() methods to define routes for HTTP GET, POST, PUT and DELETE requests respectively
+
+-> Handle POST Request: 
+    - to handle the POST Request, you need to create the form let's say ex., index.html
+    - when you are working with form data, then you have to discuss about 'Body Parser'
+    - Body Parser: to handle the HTTP POST request in express, we have to install the middleware - body-parser
+    - the Middleware was a part of Express earlier
+    - the 'body-parser' Module parses the JSON, Buffer, String and URL encoded data submitted using HTTP POST request.
+    - >>> npm install body-parser  

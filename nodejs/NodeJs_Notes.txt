@@ -1,0 +1,43 @@
+-> What is NodeJS?
+    - NodeJS is an open source Javascript RunTim Environment
+    - It implements the Async., methodology
+
+-> Used for?
+    - Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
+
+-> NodeJS is Frontend or Backend?
+    - Node. js is sometimes misunderstood by developers as a backend framework that is exclusively used to construct servers. This is not the case; Node. js can be used on the frontend as well as the backend.
+
+-> Console Based
+-> Web Based
+-> Global Objects: 
+    __dirname
+    __filename
+    Buffer
+    Timers
+    Process
+
+-> OS Module
+-> User Defined Errors
+-> DNS Module
+-> Net Module
+-> Crypto
+-> CreateCipher
+-> CreateDeCipher
+-> Streams
+    - readableStreams
+    - writableStreams
+    - pipingStreams
+-> Compress and Decompress
+-> File
+    - Reading
+    - Opening 
+    - Writing
+    - Stats
+
+-> Path
+-> StringDecoder
+-> QueryString
+-> Assertion
+-> CallBacks
+-> Event Emitters
