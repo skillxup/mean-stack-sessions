@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-12">
+        <form [formGroup]="uploadForm" (ngSubmit)="submit()">
+
+            <input type="file" accept="image/" (change)="showPreview($event)" class="form-control mb-3" />
+            
+            <input type="text" formControlName="name" placeholder="ex., enter any text" class="form-control mb-3" />
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="imagePreview" *ngIf="imageURL && imageURL!==''">
+                        <img [src]="imageURL" [alt]="uploadForm.value.name" />
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Upload a File</button>
+        </form>
+    </div>
+</div>

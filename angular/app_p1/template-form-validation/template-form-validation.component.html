@@ -1,0 +1,39 @@
+<form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+    <div class="form-group mb-3">
+        <label> Name </label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="user.name" #name="ngModel" [ngClass]="{'is-invalid': userForm.submitted && name.invalid}" required />
+        <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+            <p *ngIf="name.errors.required"> name is required </p>
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label> Email </label>
+        <input type="text" name="email" class="form-control" [(ngModel)]="user.email" #email="ngModel" [ngClass]="{'is-invalid': userForm.submitted && email.invalid}" required />
+        <div class="invalid-feedback" *ngIf="userForm.submitted && email.invalid">
+            <p *ngIf="email.errors.required"> email is required </p>
+            <p *ngIf="email.errors.email"> email is invalid </p>
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label> Password </label>
+        <input type="text" name="password" class="form-control" [(ngModel)]="user.password" #password="ngModel" [ngClass]="{'is-invalid': userForm.submitted && password.invalid}" required minlength="5" />
+        <div class="invalid-feedback" *ngIf="userForm.submitted && password.invalid">
+            <p *ngIf="password.errors.required"> password is required </p>
+            <p *ngIf="password.errors.minlength"> should have min 5 chars </p>
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label> Hobbies </label>
+        <select class="form-control" name="hobbies" [(ngModel)]="user.hobbies">
+            <option value=""> choose hobby </option>
+            <option *ngFor="let hobby of hobbies" [value]="hobby">{{hobby}}</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary">submit</button>
+    </div>
+</form>

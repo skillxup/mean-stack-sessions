@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-inverse table-border">
+            <tr>
+                <th>PropertyName (Original Value)</th>
+                <th>Using of Pipe Symbol</th>
+                <th>Result of Implemented Pipe Symbol</th>
+            </tr>
+            
+            <tr>
+                <td>User Name: {{username}}</td>
+                <td>uppercase</td>
+                <td>{{username | uppercase}}</td>
+            </tr>
+
+            <tr>
+                <td>Full Name: {{fullname}}</td>
+                <td>lowercase</td>
+                <td>{{fullname | lowercase}}</td>
+            </tr>
+
+            <tr>
+                <td>Full Name: {{fullname}}</td>
+                <td>slice</td>
+                <td>{{fullname | slice:3}}</td>
+            </tr>
+
+            <tr>
+                <td>Array Nums: {{arrNums}}</td>
+                <td>slice</td>
+                <td>{{arrNums | slice:2:4}}</td>
+            </tr>
+
+            <tr>
+                <td>PI: {{pi}}</td>
+                <td>number</td>
+                <td>{{pi | number: '3.0-0'}}</td>
+            </tr>
+
+            <tr>
+                <td>Salary: {{salary}}</td>
+                <td>currency</td>
+                <td>{{salary | currency: 'EUR'}}</td>
+            </tr>
+
+            <tr>
+                <td>Value Promise: {{valuePromise}}</td>
+                <td>async</td>
+                <td>{{valuePromise | async}}</td>
+            </tr>
+
+            <tr>
+                <td>Current Date: {{curDate}}</td>
+                <td>date</td>
+                <td>{{curDate | date}}</td>
+            </tr>
+
+            <tr>
+                <td>Current Date: {{curDate}}</td>
+                <td>date</td>
+                <td>{{curDate | date: 'medium'}}</td>
+            </tr>
+
+            <tr>
+                <td>Person: {{person}}</td>
+                <td>json</td>
+                <td>{{person | json}}</td>
+            </tr>
+
+            <tr>
+                <td>Full Name: {{fullname}}</td>
+                <td>capitalize</td>
+                <td>{{fullname | capitalize}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>

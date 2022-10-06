@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-4" *ngFor="let product of products">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5>{{product.name}}</h5>
+                <p>{{product.price}}$</p>
+                <a class="btn btn-primary" [routerLink]="['/product-detail/', product.id]">check product</a>
+            </div>
+        </div>
+    </div>
+</div>
