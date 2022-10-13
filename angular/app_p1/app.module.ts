@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
@@ -19,6 +20,12 @@ import { UnderstandPipesComponent } from './understand-pipes/understand-pipes.co
 import { CapitalizePipe } from './understand-pipes/capitalize.pipe';
 import { CrudOperationsUserComponent } from './crud-operations-user/crud-operations-user.component';
 import { CrudOperationsUserService } from './crud-operations-user/crud-operations-user.service';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { RoundBlockDirective } from './directives/round-block.directive';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { AccountComponent } from './dependency-injection/account/account.component';
+import { NewAccountComponent } from './dependency-injection/new-account/new-account.component';
+import { ObservablesRestapiComponent } from './observables-restapi/observables-restapi.component';
 
 registerLocaleData(localeEs);
 
@@ -35,13 +42,20 @@ registerLocaleData(localeEs);
     FileUploadPreviewComponent,
     UnderstandPipesComponent, 
     CapitalizePipe, 
-    CrudOperationsUserComponent
+    CrudOperationsUserComponent, 
+    CustomDirectiveComponent, 
+    RoundBlockDirective, 
+    DependencyInjectionComponent, 
+    AccountComponent, 
+    NewAccountComponent, 
+    ObservablesRestapiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es'}, 

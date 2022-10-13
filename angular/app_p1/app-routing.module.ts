@@ -11,6 +11,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FileUploadPreviewComponent } from './file-upload-preview/file-upload-preview.component';
 import { UnderstandPipesComponent } from './understand-pipes/understand-pipes.component';
 import { CrudOperationsUserComponent } from './crud-operations-user/crud-operations-user.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" }, 
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: "file-upload-preview", component: FileUploadPreviewComponent }, 
   { path: "understand-pipes", component: UnderstandPipesComponent }, 
   { path: "crud-operations-user", component: CrudOperationsUserComponent }, 
+  { path: "custom-directive", component: CustomDirectiveComponent }, 
+  { path: "dependency-injection", component: DependencyInjectionComponent },  
   { path: "**", component: PageNotFoundComponent }
 ];
 

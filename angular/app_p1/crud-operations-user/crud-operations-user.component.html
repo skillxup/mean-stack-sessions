@@ -1,1 +1,88 @@
-<p>crud-operations-user works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-3 mb-3">
+            <h4>Users Lists</h4>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Full Name</th>
+                        <th class="text-center">Email Address</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.fullName}}</td>
+                        <td>{{user.emailAddress}}</td>
+                        <td>
+                            <button type="button" class="btn btn-info btn-sm mr-2" (click)="showEditUserForm(user)">Edit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm" (click)="removeUser(user)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <button type="button" class="btn btn-success" (click)="showAddUserForm()">Add New User</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- adding new user -->
+    <div class="row">
+        <div class="col-sm-12">
+            <form *ngIf="userForm">
+                <h4>Add New User</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" class="form-control" name="fullName" [(ngModel)]="newUser.fullName" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td><input type="text" class="form-control" name="emailAddress" [(ngModel)]="newUser.emailAddress" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" (click)="saveUser(newUser)"  class="btn btn-primary btn-sm mr-3">Save</button>
+
+                            <button type="button" (click)="cancelNewUser()" class="btn btn-warning btn-sm mr-3">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- editing the exiting user -->
+    <div class="row">
+        <div class="col-sm-12">
+            <form *ngIf="editUserForm">
+                <h4>Edit User Form</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" class="form-control" name="fullName" [(ngModel)]="editedUser.fullName" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td><input type="text" class="form-control" name="emailAddress" [(ngModel)]="editedUser.emailAddress" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-primary mr-3" (click)="updateUser()">Update</button>
+
+                            <button type="button" class="btn btn-warning mr-3" (click)="cancelEditUser()">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
